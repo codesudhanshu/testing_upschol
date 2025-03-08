@@ -3,7 +3,7 @@
   "rules": {
     "indent": [
       "error",
-      100, 
+      1500, 
       {
         "SwitchCase": 1
       }
