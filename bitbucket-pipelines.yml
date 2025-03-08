@@ -1,0 +1,34 @@
+image: atlassian/default-image:4
+
+pipelines:
+  branches:
+    master:
+      - step:
+          name: "Build Upschol Prod"
+          script:
+            - rm -rf .next
+            - echo "$ENV_ENCODED" | base64 -d > .env
+            - npm ci
+            - CI=false npm run build
+            - touch develop.tar
+            - tar --exclude=.git --exclude=develop.tar -czvf develop.tar .
+          artifacts:
+              - develop.tar
+      - step:
+          name: "Deploying UpSchol Prod"
+          deployment: production
+          script:
+            - pipe: atlassian/scp-deploy:1.2.1
+              variables:
+                USER: 'ubuntu'
+                SERVER: 'upschol.com'
+                SSH_KEY: $PROD_SSH_KEY
+                REMOTE_PATH: '/home/ubuntu/'
+                LOCAL_PATH: 'develop.tar'
+            - pipe: atlassian/ssh-run:0.3.0
+              variables:
+                SSH_USER: 'ubuntu'
+                SERVER: 'upschol.com'
+                SSH_KEY: $PROD_SSH_KEY
+                MODE: 'script'
+                COMMAND: 'myScript.sh'
