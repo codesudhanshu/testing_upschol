@@ -105,9 +105,6 @@ return(<><Head><meta charset="utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<link rel="icon" type="image/x-icon" href="/nmims/favicon.jpg" />
-		<script src="/nmims/jquery-3.3.1.min.js"></script>
-		<script src="/nmims/easy-responsive-tabs.js"></script>
-		<script src="/nmims/slick.js"></script>
 		<meta name="author" content='upschool'/>
 		<meta name="keyword" content="" />
 		<meta name="description" content=''/>

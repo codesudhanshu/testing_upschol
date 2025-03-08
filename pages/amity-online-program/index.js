@@ -72,7 +72,7 @@ const Amity = () =>{
     <meta name="twitter:title" content="" />
     <meta name="twitter:description" content="" />
     <meta name="twitter:image" content="" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    {/* <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" /> */}
     </Head>
     <header className="bg-white shadow-sm">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-3">
