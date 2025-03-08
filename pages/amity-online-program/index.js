@@ -103,7 +103,7 @@ const Amity = () =>{
 <div className={styles.main_container_flex}>
     <div className={styles.main_data}>
         <div className={styles.main_headings}>
-            <h1>Drive Your Career Growth With <br /> Amity's Online MBA!</h1>
+            <h1>Drive Your Career Growth With <br /> Amity&rsquo;s Online MBA!</h1>
         </div>
         <div className={styles.main_headings2}>
             <h1>Gain Expertis, Build Networks, and Lead with <br /> impact. Secure Your Spot Now!</h1>

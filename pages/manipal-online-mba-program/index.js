@@ -410,16 +410,14 @@ const Manipal = () => {
 						data-toggle="tab"
 						href="#menu1"
 						onClick={() => setActiveTab("#menu1")}
-					>
-						Master's Degree
+					>Master&rsquo;s Degree
 					</button>
 					<button
 						className={`btn ${styles.btn} ${activeTab === "#menu2" ? styles.active : ""}`}
 						data-toggle="tab"
 						href="#menu2"
 						onClick={() => setActiveTab("#menu2")}
-					>
-						Bachelor's Degree
+					>Bachelor&rsquo;s Degree
 					</button>
 					</div>
 					<div className={`${styles.tab_content} tab-content`}>

@@ -166,7 +166,7 @@ return(
       <div className="row">
         <div className="col-md-8">
           <p className={styles.org_p} style={{marginTop:"10px"}}>
-            Seats are filling fast! There's only limited seats available.
+            Seats are filling fast! There&rsquo;s only limited seats available.
           </p>
         </div>
         <div className="col-md-4">
@@ -579,7 +579,7 @@ return(
                             color: "#000"
                           }}
                         >
-                       Mentorship provides students with valuable career guidance and advice based on their own experiences in the industry to succeed in a student's chosen field.
+                       Mentorship provides students with valuable career guidance and advice based on their own experiences in the industry to succeed in a student&rsquo;s chosen field.
                         </p>
                       </div>
                     </li>
@@ -723,7 +723,7 @@ return(
                             color: "#000"
                           }}
                         >
-                       Mentorship provides students with valuable career guidance and advice based on their own experiences in the industry to succeed in a student's chosen field.
+                       Mentorship provides students with valuable career guidance and advice based on their own experiences in the industry to succeed in a student&rsquo;s chosen field.
                         </p>
                       </div>
                     </li>
@@ -901,7 +901,7 @@ return(
           />
           <h6 className={styles.cer_hh} >Degree from Top Ranked University</h6>
           <p className={styles.cer_p}>
-            Obtain a high-status degree from India's top universities when you
+            Obtain a high-status degree from India&rsquo;s top universities when you
             complete your programme
           </p>
           <hr />
