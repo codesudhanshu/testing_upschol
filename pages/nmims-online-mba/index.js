@@ -3,7 +3,6 @@ import styles from '../../styles/nmims.module.css'
 import Slider from "react-slick";
 import { useState } from 'react';
 import { useRouter } from "next/router"; // Import useRouter
-import Script from "next/script";
 
 const Nmims = () =>{
 	const settings = {
@@ -106,9 +105,9 @@ return(<><Head><meta charset="utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<link rel="icon" type="image/x-icon" href="/nmims/favicon.jpg" />
-		<Script src="/nmims/jquery-3.3.1.min.js" />
+		{/* <Script src="/nmims/jquery-3.3.1.min.js" />
 		<Script src="/nmims/easy-responsive-tabs.js" />
-		<Script src="/nmims/slick.js" />
+		<Script src="/nmims/slick.js" /> */}
 		<meta name="author" content='upschool'/>
 		<meta name="keyword" content="" />
 		<meta name="description" content=''/>
