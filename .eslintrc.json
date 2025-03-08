@@ -1,13 +1,7 @@
 {
   "extends": "next/core-web-vitals",
   "rules": {
-    "indent": [
-      "error",
-      "tab", 
-      {
-        "SwitchCase": 1
-      }
-    ],
+    "indent": "off",
     "comma-dangle": 0,
     "no-undef": "error",
     "max-len": 0,
