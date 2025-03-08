@@ -3,6 +3,7 @@ import Slider from 'react-slick';
 import styles from '../../styles/manipal.module.css';
 import Head from 'next/head';
 import { useRouter } from "next/router"; // Import useRouter 
+import Script from "next/script";
 
 const Manipal = () => {
 	const [activeTab, setActiveTab] = useState("#home");
@@ -122,11 +123,11 @@ const Manipal = () => {
 				<meta name="keyword" content="" />
 				<meta name="description" content=''/>
 				<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
-				<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-				<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+				<Script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js" />
+				<Script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" />
 				<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
-				<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-				<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+				<Script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" />
+				<Script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" />
 				<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
 				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 				<meta property="og:url" content="" />
