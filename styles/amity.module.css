@@ -502,7 +502,7 @@
         padding: 2em 0 0 0em;
     }
     .online_degree{
-        padding: 18em 0 0 0 ;
+        padding: 10em 0 0 0 ;
     }
 }
 
@@ -511,18 +511,5 @@
 {
     #tenure{
         display: none;
-    }
-}
-
-
-@media screen and (max-width:480px) {
-    .online_degree{
-        padding: 21em 0 0 0 ;
-    }
-}
-
-@media screen and (max-width:360px) {
-    .online_degree{
-        padding: 23em 0 0 0 ;
     }
 }
