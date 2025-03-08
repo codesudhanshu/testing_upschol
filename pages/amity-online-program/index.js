@@ -2,7 +2,7 @@ import Head from 'next/head'
 import styles from '../../styles/amity.module.css'
 import { useRef, useState } from 'react';
 import { useRouter } from "next/router"; // Import useRouter
-const amity = () =>{
+const Amity = () =>{
     const formRef = useRef(null); // Create a reference for the form
     const first = useRef(null) 
 
@@ -371,4 +371,4 @@ const amity = () =>{
     )
 }
 
-export default amity
+export default Amity

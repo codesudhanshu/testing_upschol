@@ -6,7 +6,7 @@ import dynamic from "next/dynamic";
 import { useRouter } from "next/router"; // Import useRouter 
 const OwlCarousel = dynamic(() => import("react-owl-carousel"), { ssr: false });
 
-const lpu = () =>{
+const Lpu = () =>{
   const [activeTab, setActiveTab] = useState("UG");
     useEffect(() => {
             // Dynamically add Bootstrap CSS after Tailwind
@@ -1342,4 +1342,4 @@ return(
 )
 }
 
-export default lpu
+export default Lpu
