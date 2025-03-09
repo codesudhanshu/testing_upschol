@@ -1007,7 +1007,7 @@ return(
       <div className="row">
         <div className={`col-md-3 ${styles.abt_sec}`}>
           <center>
-            <img src="/lpu/3000+ students.png" />
+            <img src="/lpu/3000students.png" />
           </center>
           <h3 className={styles.abt_h}>30000+</h3>
           <p className={styles.abt_pp}>STUDENTS</p>
@@ -1015,7 +1015,7 @@ return(
         {/*end of col*/}
         <div className={`col-md-3 ${styles.abt_sec}`}>
           <center>
-            <img src="/lpu/50k+ alumini1.png" />
+            <img src="/lpu/50kalumini1.png" />
           </center>
           <h3 className={styles.abt_h}>50k+</h3>
           <center>
@@ -1025,7 +1025,7 @@ return(
         {/*end of col*/}
         <div className={`col-md-3 ${styles.abt_sec}`}>
           <center>
-            <img src="/lpu/600+ CAMPUS EVENT.png" />
+            <img src="/lpu/600CAMPUSEVENT.png" />
           </center>
           <h3 className={styles.abt_h}>600+</h3>
           <center>
@@ -1035,7 +1035,7 @@ return(
         {/*end of col*/}
         <div className={`col-md-3 ${styles.abt_sec}`}>
           <center>
-            <img src="/lpu/600+ PROFILE VISITOR.png" />
+            <img src="/lpu/600PROFILEVISITOR.png" />
           </center>
           <h3 className={styles.abt_h}>600+</h3>
           <center>
