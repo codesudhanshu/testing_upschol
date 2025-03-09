@@ -4,6 +4,9 @@ import styled from '../../styles/manipal.module.css'
 import { useEffect, useState } from 'react';
 import dynamic from "next/dynamic";
 import { useRouter } from "next/router"; // Import useRouter 
+import Script from "next/script";
+// import "react-owl-carousel/dist/assets/owl.carousel.css";
+// import "react-owl-carousel/dist/assets/owl.theme.default.css";
 const OwlCarousel = dynamic(() => import("react-owl-carousel"), { ssr: false });
 
 const Lpu = () =>{
@@ -104,16 +107,25 @@ return(
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>LPU Online | Lovely Professional University | Distance Education</title>   
     <meta name="description" content="Lovely Professional University - LPU Online offers a wide range of distance education programs for BA, BCA, BCom, MBA, MCA, MCom & MSc in 2023." />
-    {/* <link rel="icon" type="image/x-icon" href="./lpu/lpu-fav" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.green.css" />
+    <link rel="icon" type="image/x-icon" href="./lpu/lpu-fav" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css" />
-    <Script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" />
-    <Script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js" /> */}
+    {/* <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" /> */}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.green.css" />
  </Head>  
+ <Script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+        strategy="beforeInteractive"
+      />
 
+      {/* intl-tel-input */}
+      <Script
+        src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"
+        strategy="lazyOnload"
+      />
 <div style={{overflow:"hidden"}}>
 <div className={styles.navigation}>
     <div>
@@ -436,7 +448,7 @@ return(
           <h2 className={styles.adv_h}>
             4 Reason
             <br /> To Pursue Online MBA <br />
-            <span classname={styles.sp} style={{color: "#FF6600"}}>From LPU</span>
+            <span className={styles.sp} style={{color: "#FF6600"}}>From LPU</span>
           </h2>
         </div>
       </div>
@@ -895,7 +907,7 @@ return(
           <br />
           <img
             src="/lpu/degree from top ranked.png"
-            classname={styles.cr_icon}
+            className={styles.cr_icon}
             align="left"
             style={{marginRight:"1em"}}
           />
@@ -907,7 +919,7 @@ return(
           <hr />
           <img
             src="/lpu/Universally Accepted.png"
-            classname={styles.cr_icon}
+            className={styles.cr_icon}
             align="left"
             style={{marginRight:"1em"}}
           />
@@ -919,7 +931,7 @@ return(
           <hr />
           <img
             src="/lpu/No Difference From Campus Programme Degree.png"
-            classname={styles.cr_icon}
+            className={styles.cr_icon}
             align="left"
             style={{marginRight:"1em"}}
           />
@@ -976,7 +988,7 @@ return(
         <div className="col-md-12">
           <h2 className={styles.abt_h}>
             <strong>
-              <span classname={styles.sp} style={{color: "#FF6600"}}>About </span>- Why Join LPU
+              <span className={styles.sp} style={{color: "#FF6600"}}>About </span>- Why Join LPU
             </strong>
           </h2>
           <p className={styles.abt_p}>
@@ -1042,7 +1054,7 @@ return(
         <div className="col-md-12">
           <h2 className={styles.abt_h}>
             <strong>
-              <span classname={styles.sp} style={{color: "#FF6600"}}>Top Recruiter</span> Companies
+              <span className={styles.sp} style={{color: "#FF6600"}}>Top Recruiter</span> Companies
             </strong>
           </h2>
           <div className={styles.desk_img}>
@@ -1064,7 +1076,7 @@ return(
         <div className="col-md-12">
           <h3 className={styles.gr_h}>
             <strong>
-              <span classname={styles.sp} style={{color: "#FF6600"}}>Hear From</span> Real Student
+              <span className={styles.sp} style={{color: "#FF6600"}}>Hear From</span> Real Student
             </strong>
           </h3>
           <p>What our Former Students have to say about our online LPU</p>
