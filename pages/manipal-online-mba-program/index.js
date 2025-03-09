@@ -399,7 +399,7 @@ const Manipal = () => {
 					</h1>
 					<div className={styles.centered_tabs}>
 					<button
-						className={`btn ${styles.btn} ${activeTab === "#home" ? styles.active : ""}`}
+						className={`btn ${activeTab === "#home" ? "active" : ""}`}
 						data-toggle="tab"
 						href="#home"
 						onClick={() => setActiveTab("#home")}
@@ -407,14 +407,14 @@ const Manipal = () => {
 						All
 					</button>
 					<button
-						className={`btn ${styles.btn} ${activeTab === "#menu1" ? styles.active : ""}`}
+						className={`btn ${activeTab === "#menu1" ? "active" : ""}`}
 						data-toggle="tab"
 						href="#menu1"
 						onClick={() => setActiveTab("#menu1")}
 					>Master&rsquo;s Degree
 					</button>
 					<button
-						className={`btn ${styles.btn} ${activeTab === "#menu2" ? styles.active : ""}`}
+						className={`btn ${activeTab === "#menu2" ? "active" : ""}`}
 						data-toggle="tab"
 						href="#menu2"
 						onClick={() => setActiveTab("#menu2")}
@@ -424,7 +424,7 @@ const Manipal = () => {
 					<div className={`${styles.tab_content} tab-content`}>
 						<div
 							id="home"
-							className="tab-pane fade in active"
+							className={`tab-pane fade in active ${activeTab === "#home" ? "show active" : ""}`}
 							style={{ padding: 23 }}
 						>
 							<div className="row">
@@ -835,7 +835,7 @@ const Manipal = () => {
 								</div>
 							</div>
 						</div>
-						<div id="menu1" className="tab-pane fade" style={{ padding: 23 }}>
+						<div id="menu1" className={`tab-pane fade ${activeTab === "#menu1" ? "show active" : ""}`} style={{ padding: 23 }}>
 							<div className="row">
 								<div className="col-md-4 col-4">
 									<div className="panel panel-default">
@@ -1043,7 +1043,7 @@ const Manipal = () => {
 								</div>
 							</div>
 						</div>
-						<div id="menu2" className="tab-pane fade" style={{ padding: 23 }}>
+						<div id="menu2" className={`tab-pane fade ${activeTab === "#menu2" ? "show active" : ""}`} style={{ padding: 23 }}>
 							<div className="row">
 								<div className="col-md-4 col-4">
 									<div className="panel panel-default">
