@@ -1514,4 +1514,26 @@ margin: 20px;}
     
   }
 
+  @media screen and (max-width:600px) {
+    .button_ug {
+        background-color: whitesmoke;
+        color: #073D84;
+        margin-left: 1em;
+        font-size: 1.2em;
+    }
+    
+    .button_pg {
+        background-color: whitesmoke;
+        color: #073D84;
+        font-size: 1.2em;
+    }
+    
+    /* Selected Button Style */
+    .selected {
+        background-color: rgb(245 130 37) !important;
+        color: white !important;
+        font-size: 1.2em;
+    }
+  }
+
  
