@@ -370,6 +370,40 @@ const Manipal = () => {
 						</div>
 					</div>
 				</section>
+
+
+{/* <section> */}
+	<div className={styles.manipal_div}>
+		<h2>The Manipal Legacy - Transformative education for a successful career</h2>
+		<div className={styles.manipal_images_div}>
+			<div className={styles.manipal_images}>
+				<div className={styles.manipal_images_divs}>
+					<img src="/manipal/Manipal-1.jpg" alt="Manipal-1"/>
+				</div>
+				<div className={styles.manipal_para1}>
+					<p>Manipal Academy of Higher Education (MAHE)</p>
+				</div>
+			</div>
+			<div className={styles.manipal_images}>
+				<div className={styles.manipal_images_divs}>
+					<img src="/manipal/Manipal-2.jpg" alt="Manipal-2"/>
+				</div>
+				<div className={styles.manipal_para2}>
+					<p>Manipal University Jaipur (MUJ)</p>
+				</div>
+			</div>
+			<div className={styles.manipal_images}>
+				<div className={styles.manipal_images_divs}>
+					<img src="/manipal/Manipal-3.png" alt="Manipal-3"/>
+				</div>
+				<div className={styles.manipal_para3}>
+					<p>Sikkim Manipal University (SMU)</p>
+				</div>
+			</div>
+		</div>
+	</div>
+{/* </section> */}
+
 				<section className={styles.mobmar}>
 			<h1 className="text-center" style={{ fontWeight: 600, fontFamily: 'Inter, sans-serif', padding: '25px 0' }}>
 				Rankings & Accreditations
@@ -399,32 +433,28 @@ const Manipal = () => {
 					</h1>
 					<div className={styles.centered_tabs}>
 					<button
-						className={`btn ${activeTab === "#home" ? "active" : ""}`}
-						data-toggle="tab"
-						href="#home"
+						className={`${styles.btn} ${activeTab === "#home" ? styles.selected : ""}`}
 						onClick={() => setActiveTab("#home")}
 					>
 						All
 					</button>
 					<button
-						className={`btn ${activeTab === "#menu1" ? "active" : ""}`}
-						data-toggle="tab"
-						href="#menu1"
+						className={`${styles.btn} ${activeTab === "#menu1" ? styles.selected : ""}`}
 						onClick={() => setActiveTab("#menu1")}
 					>Master&rsquo;s Degree
 					</button>
 					<button
-						className={`btn ${activeTab === "#menu2" ? "active" : ""}`}
-						data-toggle="tab"
-						href="#menu2"
+						className={`${styles.btn} ${activeTab === "#menu2" ? styles.selected : ""}`}
 						onClick={() => setActiveTab("#menu2")}
 					>Bachelor&rsquo;s Degree
 					</button>
 					</div>
+			
+					{activeTab === "#home" && (
 					<div className={`${styles.tab_content} tab-content`}>
 						<div
 							id="home"
-							className={`tab-pane fade in active ${activeTab === "#home" ? "show active" : ""}`}
+							className={`tab-pane fade in active`}
 							style={{ padding: 23 }}
 						>
 							<div className="row">
@@ -471,26 +501,26 @@ const Manipal = () => {
 										</div>
 										<div style={{ padding: 15 }}>
 										<button
-	id="enquireButton2"
-	className="enquire-btn"
-	style={{
-		color: "white",
-		background: "linear-gradient(90deg, #ed3024 0%, #ff6600 100%)",
-		outline: "none",
-		border: "none",
-		padding: "10px",
-		borderRadius: "5px",
-		cursor: "pointer",
-	}}
-	onClick={() => {
-		const fnameInput = document.getElementById("fname");
-		
-		if (fnameInput) {
-			fnameInput.scrollIntoView({ behavior: "smooth", block: "start" });
-			fnameInput.focus(); // Instant focus without delay
-		}
-	}}
-> 
+														id="enquireButton2"
+														className="enquire-btn"
+														style={{
+															color: "white",
+															background: "linear-gradient(90deg, #ed3024 0%, #ff6600 100%)",
+															outline: "none",
+															border: "none",
+															padding: "10px",
+															borderRadius: "5px",
+															cursor: "pointer",
+														}}
+														onClick={() => {
+															const fnameInput = document.getElementById("fname");
+
+															if (fnameInput) {
+																fnameInput.scrollIntoView({ behavior: "smooth", block: "start" });
+																fnameInput.focus(); // Instant focus without delay
+															}
+														}}
+													> 
 												Enquire Now
 											</button>
 										</div>
@@ -539,26 +569,26 @@ const Manipal = () => {
 										</div>
 										<div style={{ padding: 15 }}>
 										<button
-	id="enquireButton2"
-	className="enquire-btn"
-	style={{
-		color: "white",
-		background: "linear-gradient(90deg, #ed3024 0%, #ff6600 100%)",
-		outline: "none",
-		border: "none",
-		padding: "10px",
-		borderRadius: "5px",
-		cursor: "pointer",
-	}}
-	onClick={() => {
-		const fnameInput = document.getElementById("fname");
-		
-		if (fnameInput) {
-			fnameInput.scrollIntoView({ behavior: "smooth", block: "start" });
-			fnameInput.focus(); // Instant focus without delay
-		}
-	}}
->Enquire Now</button>
+												id="enquireButton2"
+												className="enquire-btn"
+												style={{
+													color: "white",
+													background: "linear-gradient(90deg, #ed3024 0%, #ff6600 100%)",
+													outline: "none",
+													border: "none",
+													padding: "10px",
+													borderRadius: "5px",
+													cursor: "pointer",
+												}}
+												onClick={() => {
+													const fnameInput = document.getElementById("fname");
+
+													if (fnameInput) {
+														fnameInput.scrollIntoView({ behavior: "smooth", block: "start" });
+														fnameInput.focus(); // Instant focus without delay
+													}
+												}}
+											>Enquire Now</button>
 										</div>
 									</div>
 								</div>
@@ -605,25 +635,25 @@ const Manipal = () => {
 										</div>
 										<div style={{ padding: 15 }}>
 										<button
-	id="enquireButton2"
-	className="enquire-btn"
-	style={{
-		color: "white",
-		background: "linear-gradient(90deg, #ed3024 0%, #ff6600 100%)",
-		outline: "none",
-		border: "none",
-		padding: "10px",
-		borderRadius: "5px",
-		cursor: "pointer",
-	}}
-	onClick={() => {
-		const fnameInput = document.getElementById("fname");
-		
-		if (fnameInput) {
-			fnameInput.scrollIntoView({ behavior: "smooth", block: "start" });
-			fnameInput.focus(); // Instant focus without delay
-		}
-	}}> 
+												id="enquireButton2"
+												className="enquire-btn"
+												style={{
+													color: "white",
+													background: "linear-gradient(90deg, #ed3024 0%, #ff6600 100%)",
+													outline: "none",
+													border: "none",
+													padding: "10px",
+													borderRadius: "5px",
+													cursor: "pointer",
+												}}
+												onClick={() => {
+													const fnameInput = document.getElementById("fname");
+
+													if (fnameInput) {
+														fnameInput.scrollIntoView({ behavior: "smooth", block: "start" });
+														fnameInput.focus(); // Instant focus without delay
+													}
+												}}> 
 												Enquire Now
 											</button>
 										</div>
@@ -672,26 +702,26 @@ const Manipal = () => {
 										</div>
 										<div style={{ padding: 15 }}>
 										<button
-	id="enquireButton2"
-	className="enquire-btn"
-	style={{
-		color: "white",
-		background: "linear-gradient(90deg, #ed3024 0%, #ff6600 100%)",
-		outline: "none",
-		border: "none",
-		padding: "10px",
-		borderRadius: "5px",
-		cursor: "pointer",
-	}}
-	onClick={() => {
-		const fnameInput = document.getElementById("fname");
-		
-		if (fnameInput) {
-			fnameInput.scrollIntoView({ behavior: "smooth", block: "start" });
-			fnameInput.focus(); // Instant focus without delay
-		}
-	}}
-> 
+													id="enquireButton2"
+													className="enquire-btn"
+													style={{
+														color: "white",
+														background: "linear-gradient(90deg, #ed3024 0%, #ff6600 100%)",
+														outline: "none",
+														border: "none",
+														padding: "10px",
+														borderRadius: "5px",
+														cursor: "pointer",
+													}}
+													onClick={() => {
+														const fnameInput = document.getElementById("fname");
+
+														if (fnameInput) {
+															fnameInput.scrollIntoView({ behavior: "smooth", block: "start" });
+															fnameInput.focus(); // Instant focus without delay
+														}
+													}}
+												> 
 												Enquire Now
 											</button>
 										</div>
@@ -740,26 +770,26 @@ const Manipal = () => {
 										</div>
 										<div style={{ padding: 15 }}>
 										<button
-	id="enquireButton2"
-	className="enquire-btn"
-	style={{
-		color: "white",
-		background: "linear-gradient(90deg, #ed3024 0%, #ff6600 100%)",
-		outline: "none",
-		border: "none",
-		padding: "10px",
-		borderRadius: "5px",
-		cursor: "pointer",
-	}}
-	onClick={() => {
-		const fnameInput = document.getElementById("fname");
-		
-		if (fnameInput) {
-			fnameInput.scrollIntoView({ behavior: "smooth", block: "start" });
-			fnameInput.focus(); // Instant focus without delay
-		}
-	}}
-> 
+											id="enquireButton2"
+											className="enquire-btn"
+											style={{
+												color: "white",
+												background: "linear-gradient(90deg, #ed3024 0%, #ff6600 100%)",
+												outline: "none",
+												border: "none",
+												padding: "10px",
+												borderRadius: "5px",
+												cursor: "pointer",
+											}}
+											onClick={() => {
+												const fnameInput = document.getElementById("fname");
+
+												if (fnameInput) {
+													fnameInput.scrollIntoView({ behavior: "smooth", block: "start" });
+													fnameInput.focus(); // Instant focus without delay
+												}
+											}}
+										> 
 												Enquire Now
 											</button>
 										</div>
@@ -808,26 +838,26 @@ const Manipal = () => {
 										</div>
 										<div style={{ padding: 15 }}>
 										<button
-	id="enquireButton2"
-	className="enquire-btn"
-	style={{
-		color: "white",
-		background: "linear-gradient(90deg, #ed3024 0%, #ff6600 100%)",
-		outline: "none",
-		border: "none",
-		padding: "10px",
-		borderRadius: "5px",
-		cursor: "pointer",
-	}}
-	onClick={() => {
-		const fnameInput = document.getElementById("fname");
-		
-		if (fnameInput) {
-			fnameInput.scrollIntoView({ behavior: "smooth", block: "start" });
-			fnameInput.focus(); // Instant focus without delay
-		}
-	}}
-> 
+												id="enquireButton2"
+												className="enquire-btn"
+												style={{
+													color: "white",
+													background: "linear-gradient(90deg, #ed3024 0%, #ff6600 100%)",
+													outline: "none",
+													border: "none",
+													padding: "10px",
+													borderRadius: "5px",
+													cursor: "pointer",
+												}}
+												onClick={() => {
+													const fnameInput = document.getElementById("fname");
+
+													if (fnameInput) {
+														fnameInput.scrollIntoView({ behavior: "smooth", block: "start" });
+														fnameInput.focus(); // Instant focus without delay
+													}
+												}}
+											> 
 												Enquire Now
 											</button>
 										</div>
@@ -835,7 +865,11 @@ const Manipal = () => {
 								</div>
 							</div>
 						</div>
-						<div id="menu1" className={`tab-pane fade ${activeTab === "#menu1" ? "show active" : ""}`} style={{ padding: 23 }}>
+						</div>
+			)}
+
+{activeTab === "#menu1" && (
+						<div style={{ padding: 23 }}>
 							<div className="row">
 								<div className="col-md-4 col-4">
 									<div className="panel panel-default">
@@ -880,27 +914,27 @@ const Manipal = () => {
 										</div>
 										<div style={{ padding: 15 }}>
 										<button
-	id="enquireButton2"
-	className="enquire-btn"
-	style={{
-		color: "white",
-		background: "linear-gradient(90deg, #ed3024 0%, #ff6600 100%)",
-		outline: "none",
-		border: "none",
-		padding: "10px",
-		borderRadius: "5px",
-		cursor: "pointer",
-	}}
-	onClick={() => {
-		const fnameInput = document.getElementById("fname");
-		
-		if (fnameInput) {
-			fnameInput.scrollIntoView({ behavior: "smooth", block: "start" });
-			fnameInput.focus(); // Instant focus without delay
-		}
-	}}
-> 
-												Enquire Now
+								id="enquireButton2"
+								className="enquire-btn"
+								style={{
+									color: "white",
+									background: "linear-gradient(90deg, #ed3024 0%, #ff6600 100%)",
+									outline: "none",
+									border: "none",
+									padding: "10px",
+									borderRadius: "5px",
+									cursor: "pointer",
+								}}
+								onClick={() => {
+									const fnameInput = document.getElementById("fname");
+
+									if (fnameInput) {
+										fnameInput.scrollIntoView({ behavior: "smooth", block: "start" });
+										fnameInput.focus(); // Instant focus without delay
+									}
+								}}
+							> 
+																			Enquire Now
 											</button>
 										</div>
 									</div>
@@ -948,26 +982,26 @@ const Manipal = () => {
 										</div>
 										<div style={{ padding: 15 }}>
 										<button
-	id="enquireButton2"
-	className="enquire-btn"
-	style={{
-		color: "white",
-		background: "linear-gradient(90deg, #ed3024 0%, #ff6600 100%)",
-		outline: "none",
-		border: "none",
-		padding: "10px",
-		borderRadius: "5px",
-		cursor: "pointer",
-	}}
-	onClick={() => {
-		const fnameInput = document.getElementById("fname");
-		
-		if (fnameInput) {
-			fnameInput.scrollIntoView({ behavior: "smooth", block: "start" });
-			fnameInput.focus(); // Instant focus without delay
-		}
-	}}
-> 
+												id="enquireButton2"
+												className="enquire-btn"
+												style={{
+													color: "white",
+													background: "linear-gradient(90deg, #ed3024 0%, #ff6600 100%)",
+													outline: "none",
+													border: "none",
+													padding: "10px",
+													borderRadius: "5px",
+													cursor: "pointer",
+												}}
+												onClick={() => {
+													const fnameInput = document.getElementById("fname");
+													
+													if (fnameInput) {
+														fnameInput.scrollIntoView({ behavior: "smooth", block: "start" });
+														fnameInput.focus(); // Instant focus without delay
+													}
+												}}
+											> 
 												Enquire Now
 											</button>
 										</div>
@@ -1016,26 +1050,26 @@ const Manipal = () => {
 										</div>
 										<div style={{ padding: 15 }}>
 										<button
-	id="enquireButton2"
-	className="enquire-btn"
-	style={{
-		color: "white",
-		background: "linear-gradient(90deg, #ed3024 0%, #ff6600 100%)",
-		outline: "none",
-		border: "none",
-		padding: "10px",
-		borderRadius: "5px",
-		cursor: "pointer",
-	}}
-	onClick={() => {
-		const fnameInput = document.getElementById("fname");
-		
-		if (fnameInput) {
-			fnameInput.scrollIntoView({ behavior: "smooth", block: "start" });
-			fnameInput.focus(); // Instant focus without delay
-		}
-	}}
-> 
+													id="enquireButton2"
+													className="enquire-btn"
+													style={{
+														color: "white",
+														background: "linear-gradient(90deg, #ed3024 0%, #ff6600 100%)",
+														outline: "none",
+														border: "none",
+														padding: "10px",
+														borderRadius: "5px",
+														cursor: "pointer",
+													}}
+													onClick={() => {
+														const fnameInput = document.getElementById("fname");
+
+														if (fnameInput) {
+															fnameInput.scrollIntoView({ behavior: "smooth", block: "start" });
+															fnameInput.focus(); // Instant focus without delay
+														}
+													}}
+												> 
 												Enquire Now
 											</button>
 										</div>
@@ -1043,7 +1077,9 @@ const Manipal = () => {
 								</div>
 							</div>
 						</div>
-						<div id="menu2" className={`tab-pane fade ${activeTab === "#menu2" ? "show active" : ""}`} style={{ padding: 23 }}>
+)}
+{activeTab === "#menu2" && (
+						<div style={{ padding: 23 }}>
 							<div className="row">
 								<div className="col-md-4 col-4">
 									<div className="panel panel-default">
@@ -1088,26 +1124,26 @@ const Manipal = () => {
 										</div>
 										<div style={{ padding: 15 }}>
 										<button
-	id="enquireButton2"
-	className="enquire-btn"
-	style={{
-		color: "white",
-		background: "linear-gradient(90deg, #ed3024 0%, #ff6600 100%)",
-		outline: "none",
-		border: "none",
-		padding: "10px",
-		borderRadius: "5px",
-		cursor: "pointer",
-	}}
-	onClick={() => {
-		const fnameInput = document.getElementById("fname");
-		
-		if (fnameInput) {
-			fnameInput.scrollIntoView({ behavior: "smooth", block: "start" });
-			fnameInput.focus(); // Instant focus without delay
-		}
-	}}
-> 
+														id="enquireButton2"
+														className="enquire-btn"
+														style={{
+															color: "white",
+															background: "linear-gradient(90deg, #ed3024 0%, #ff6600 100%)",
+															outline: "none",
+															border: "none",
+															padding: "10px",
+															borderRadius: "5px",
+															cursor: "pointer",
+														}}
+														onClick={() => {
+															const fnameInput = document.getElementById("fname");
+
+															if (fnameInput) {
+																fnameInput.scrollIntoView({ behavior: "smooth", block: "start" });
+																fnameInput.focus(); // Instant focus without delay
+															}
+														}}
+													> 
 												Enquire Now
 											</button>
 										</div>
@@ -1156,26 +1192,26 @@ const Manipal = () => {
 										</div>
 										<div style={{ padding: 15 }}>
 										<button
-	id="enquireButton2"
-	className="enquire-btn"
-	style={{
-		color: "white",
-		background: "linear-gradient(90deg, #ed3024 0%, #ff6600 100%)",
-		outline: "none",
-		border: "none",
-		padding: "10px",
-		borderRadius: "5px",
-		cursor: "pointer",
-	}}
-	onClick={() => {
-		const fnameInput = document.getElementById("fname");
-		
-		if (fnameInput) {
-			fnameInput.scrollIntoView({ behavior: "smooth", block: "start" });
-			fnameInput.focus(); // Instant focus without delay
-		}
-	}}
-> 
+															id="enquireButton2"
+															className="enquire-btn"
+															style={{
+																color: "white",
+																background: "linear-gradient(90deg, #ed3024 0%, #ff6600 100%)",
+																outline: "none",
+																border: "none",
+																padding: "10px",
+																borderRadius: "5px",
+																cursor: "pointer",
+															}}
+															onClick={() => {
+																const fnameInput = document.getElementById("fname");
+
+																if (fnameInput) {
+																	fnameInput.scrollIntoView({ behavior: "smooth", block: "start" });
+																	fnameInput.focus(); // Instant focus without delay
+																}
+															}}
+														> 
 												Enquire Now
 											</button>
 										</div>
@@ -1224,26 +1260,26 @@ const Manipal = () => {
 										</div>
 										<div style={{ padding: 15 }}>
 										<button
-	id="enquireButton2"
-	className="enquire-btn"
-	style={{
-		color: "white",
-		background: "linear-gradient(90deg, #ed3024 0%, #ff6600 100%)",
-		outline: "none",
-		border: "none",
-		padding: "10px",
-		borderRadius: "5px",
-		cursor: "pointer",
-	}}
-	onClick={() => {
-		const fnameInput = document.getElementById("fname");
-		
-		if (fnameInput) {
-			fnameInput.scrollIntoView({ behavior: "smooth", block: "start" });
-			fnameInput.focus(); // Instant focus without delay
-		}
-	}}
-> 
+															id="enquireButton2"
+															className="enquire-btn"
+															style={{
+																color: "white",
+																background: "linear-gradient(90deg, #ed3024 0%, #ff6600 100%)",
+																outline: "none",
+																border: "none",
+																padding: "10px",
+																borderRadius: "5px",
+																cursor: "pointer",
+															}}
+															onClick={() => {
+																const fnameInput = document.getElementById("fname");
+
+																if (fnameInput) {
+																	fnameInput.scrollIntoView({ behavior: "smooth", block: "start" });
+																	fnameInput.focus(); // Instant focus without delay
+																}
+															}}
+														> 
 												Enquire Now
 											</button>
 										</div>
@@ -1251,14 +1287,47 @@ const Manipal = () => {
 								</div>
 							</div>
 						</div>
-					</div>
+							)}
 				</div>
+
+				<section className={`${styles.certificate_sec} ${styles.seciton_padding}`}>
+    <div className="container">
+      <div className="row align-items-center">
+        <div className="col-sm-5">
+          <div className="text-center mb-5" id={styles.image_data}>
+            <img src="/manipal/Certificate-1.png" width="50%" style={{cursor: "pointer"}} alt="Manipal Certificate"
+              data-bs-toggle="modal" data-bs-target="#certificatModal" />
+          </div>
+          <div className={`${styles.d_flex} gap-5`}>
+            <img src="/manipal/Certificate-2.png" width="49%" style={{cursor: "pointer"}} alt="Manipal Certificate"
+              data-bs-toggle="modal" data-bs-target="#certificatModal" />
+            <img src="/manipal/Certificate-3.png" width="49%" style={{cursor: "pointer"}} alt="Manipal Certificate"
+              data-bs-toggle="modal" data-bs-target="#certificatModal" />
+          </div>
+        </div>
+        <div className="col-sm-7 ps-3 ps-sm-5">
+          <div className={`${styles.headingbox} mt-3 mt-sm-0`}>
+            <h2>Online Programs From Manipal University</h2>
+            <p><small>Manipal University provides the Online Manipal Plus that has the benefits of e-lectures, counselling from academic advisors, career assistance, and others.</small></p>
+
+          </div>
+          <ul className={styles.certificat_list}>
+            <li>Advantage of Integrated LMS and online lectures</li>
+            <li>E-Library with more than 1,50,000 e-books</li>
+            <li>Support from academic advisors</li>
+            <li>Career assistance with interview tips</li>
+            <li>Connect with university alumni network</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
 				<section
 					id="services "
 					className="services-area fix py-3 pb-5"
 					style={{
 						background: "rgba(225,229,248)",
-						marginTop: 25,
 						paddingBottom: 40
 					}}
 				>
@@ -2012,7 +2081,7 @@ const Manipal = () => {
 						<div className="col-md-5 col-12">
 							<img
 								style={{ maxWidth: "100%" }}
-								src="https://online-manipal.in/online-mba/images/online-manipal-c.webp"
+								src="/manipal/online-manipal-c.jpg"
 								loading="lazy"
 								alt=""
 							/>

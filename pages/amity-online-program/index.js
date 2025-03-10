@@ -2,6 +2,8 @@ import Head from 'next/head'
 import styles from '../../styles/amity.module.css'
 import { useRef, useState } from 'react';
 import { useRouter } from "next/router"; // Import useRouter
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 const Amity = () =>{
     const formRef = useRef(null); // Create a reference for the form
     const first = useRef(null) 
@@ -12,7 +14,7 @@ const Amity = () =>{
             first.current.focus()
         }
     };
-    const [selectedCourse, setSelectedCourse] = useState("UG");
+    const [selectedCourse, setSelectedCourse] = useState("PG");
     const [isOpen, setIsOpen] = useState(false);
     const [loading, setLoading] = useState(false);
     const router = useRouter(); 
@@ -47,6 +49,70 @@ const Amity = () =>{
             setMessage(data.error);
         }
     };
+
+    const [openIndex, setOpenIndex] = useState(null);
+
+    const toggleList = (index) => {
+        setOpenIndex(openIndex === index ? null : index);
+    };
+
+    const semesters = [
+        {
+          title: "Semester 1",
+          subjects: [
+            "Managerial Economics",
+            "Statistics for Management",
+            "Professional Communication",
+            "Accounting for Managers",
+            "Marketing Management",
+          ],
+        },
+        {
+          title: "Semester 2",
+          subjects: [
+            "Legal Aspects of Business",
+            "Business Research Methods",
+            "Financial Management",
+            "Human Resource Management",
+            "Conflict Resolution and Management",
+          ],
+        },
+        {
+          title: "Semester 3",
+          subjects: [
+            "Strategic Management",
+            "Minor Project",
+            "Professional Ethics",
+            "Specialization Elective 1",
+            "Specialization Elective 2",
+            "Specialization Elective 3",
+            "Specialization Elective 4",
+          ],
+        },
+        {
+          title: "Semester 4",
+          subjects: [
+            "Major Project",
+            "Management in Action Social Economic and Ethical Issues",
+            "Digital Marketing",
+            "Specialization Elective 1",
+            "Specialization Elective 2",
+          ],
+        },
+        {
+          title: "Specialization",
+          subjects: [
+            "Marketing",
+            "Finance",
+            "Human Resource Management",
+            "Operations Management",
+            "Information Technology Management",
+            "International Business",
+            "Entrepreneurship",
+            "Supply Chain Management",
+          ],
+        },
+      ];
 
     return(
     <>
@@ -165,27 +231,63 @@ const Amity = () =>{
             <i class="fas fa-rupee-sign text-3xl"></i>
             <div>
                 <p class="text-lg font-semibold">Easy EMI Options Available</p>
-                <p class="text-sm">24 Months Zero Cost EMI Rs. 8292 Interest Fee</p>
+                <p class="text-sm">24 Months Zero Cost EMI Rs. 7,582 Interest Fee</p>
             </div>
         </div>
         </div>
     </div>
     </div>
+
+<div className={styles.admissonsection}>
+    <div className={styles.ad_admissionsection1}>
+            <h2 className={styles.heading_unique}>Admissions Open</h2>
+            <p className={styles.para_unique}>For July &amp;25 session</p>
+    </div>
+    <div className={styles.ad_admissionsection2}>
+        <div>
+            <h2 className={styles.heading_admision}>₹7,582</h2>
+            <p className={styles.p_admision} style={{marginTop:"-1em"}}>per month</p>
+            <p className={styles.p_admision}>For July &amp;24 session</p>
+        </div>
+        <div>
+            <img src="./amity/icon2.png" alt="admission"/>
+        </div>
+    </div>
+    <div className={styles.ad_admissionsection3}>
+        <div>
+            <h2 className={styles.heading_admision}>99</h2>
+            <p className={styles.p_admision}>Course Credits</p>
+        </div>
+        <div>
+            <img src="./amity/icon3.png" alt="admission"/>
+        </div>
+    </div>
+    <div className={styles.ad_admissionsection4}>
+        <div>
+        <h2 className={styles.heading_admision}>22</h2>
+        <p className={styles.p_admision}>Courses</p>
+        </div>
+        <div>
+            <img src="./amity/icon2.png" alt="admission"/>
+        </div>
+    </div>
+</div>
+
     <div className={styles.online_degree}>
             <h1 className={styles.htext}>Online Degree <b>Programs Offered</b></h1>
             <div className={styles.center}>
                 <div className={styles.buttons_course}>
                     <button 
-                        className={`${styles.button_ug} ${selectedCourse === "UG" ? styles.selected : ""}`}
-                        onClick={() => setSelectedCourse("UG")}
-                    >
-                        UG Course
-                    </button>
-                    <button 
                         className={`${styles.button_pg} ${selectedCourse === "PG" ? styles.selected : ""}`}
                         onClick={() => setSelectedCourse("PG")}
                     >
                         PG Course
+                    </button>
+                    <button 
+                        className={`${styles.button_ug} ${selectedCourse === "UG" ? styles.selected : ""}`}
+                        onClick={() => setSelectedCourse("UG")}
+                    >
+                        UG Course
                     </button>
                 </div>
             </div>
@@ -266,6 +368,50 @@ const Amity = () =>{
                 </div>
             )}
         </div>
+
+<div className={styles.fees}>
+    <h2 className={styles.htext} style={{paddingTop:"0px"}}>Fee <b>Structure</b></h2>
+<div className={styles.feessection}>
+   <div className={styles.feessection1}>
+        <p className={styles.para_unique}>24 Months EMI</p>
+            <div className={styles.feessections}>
+                    <div>
+                        <h2 className={styles.heading_unique}>₹7,582</h2>
+                        <p className={styles.para_unique}>Interest free</p>
+                </div>
+                <div>
+                    <img src="./amity/iconfee1.png" alt="admission"/>
+                </div>
+    </div>
+
+   </div>
+    <div className={styles.feessection2}>
+    <p className={styles.para_unique2}>Per Semester Fee</p>
+    <div className={styles.feessections}>
+        <div>
+            <h2 className={styles.heading_admision}>₹49,750</h2>
+        </div>
+        <div>
+            <img src="./amity/iconfee2.png" alt="admission"/>
+        </div>
+    </div>
+    </div>
+   <div className={styles.feessection3}>
+   <p className={styles.para_unique2}>Full Course Fee</p>
+    <div className={styles.feessections}>
+        <div>
+            <h2 className={styles.heading_admision}>₹1,99,000</h2>
+        </div>
+        <div>
+            <img src="./amity/icon3.png" alt="admission"/>
+        </div>
+    </div>
+   </div>
+</div>
+
+</div>
+
+
     <div className={styles.advantage}>
         <h1 className={styles.adv_name}>The Amity Advantage</h1>
         <div className={styles.adv_container}>
@@ -296,7 +442,7 @@ const Amity = () =>{
         </div>
     </div>
 
-    <div style={{backgroundColor:'whitesmoke'}}>
+    <div style={{backgroundColor:'whitesmoke',paddingTop:"2em"}}>
     <h2 className={styles.htext}>Admission <b> Process </b></h2>
     <div class={styles.process_container}>
         <div class={styles.step}>
@@ -339,6 +485,43 @@ const Amity = () =>{
     </div>
     </div>
 
+<div className={styles.overview_program}>
+    <div>
+        <div className={styles.overview_container}>
+            <h2 className={styles.projecthead}>Program Overview</h2>
+            <button className={styles.brochure}><a className={styles.linking} onClick={scrollToForm}> DOWNLOAD BROCHURE ↓</a></button>
+        </div>
+        <div>
+            <p className={styles.para_conatainer}>Master Of Business Administration (MBA) online program created by Amity Online provides a holistic view of business management that will not only cover modern tools and practices but will also provide you with the ability to manage critical business decisions.</p>
+        </div>
+    </div>
+<div className={styles.item_containers}>
+      {semesters.map((sem, index) => (
+        <div key={index} className="border-t py-2">
+          <div
+            className="flex justify-between items-center cursor-pointer"
+            onClick={() => toggleList(index)}
+          >
+            <h3 className={`${styles.titles}`}>{sem.title}</h3>
+            <span className="text-xl">{openIndex === index ? "❎" : "⬇️"}</span>
+          </div>
+          <ul
+            className={`list-disc pl-6 transition-all duration-300 overflow-hidden bg-gray-100  ${
+              openIndex === index
+                ? "max-h-96 opacity-100 border-t border-gray-300 p-3 mt-2"
+                : "max-h-0 opacity-0 border-0 p-0"
+            }`}
+          >
+            {sem.subjects.map((subject, idx) => (
+              <li key={idx} className=" pl-4 py-1">
+                {subject}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+</div>
 
     <div className={styles.amity_online}>
         <div className={styles.amity_onlinecont}>

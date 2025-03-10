@@ -1,6 +1,7 @@
 import '../styles/globals.css'
 import '../styles/shadow.css'
 import '../styles/files.css'
+import Head from "next/head";
 import { CookiesProvider } from 'react-cookie';
 import { Layout } from 'antd';
 import CustomFooter from '../components/layout/footer';
@@ -25,6 +26,10 @@ export default function App({ Component, pageProps }) {
 	const shouldHideLayout = hideLayoutPaths.includes(router.pathname);
 
 	return (
+		<>
+		<Head>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
 		<CookiesProvider>
 			<Layout className='min-h-screen'>
 				{/* Header hide condition */}
@@ -54,5 +59,6 @@ export default function App({ Component, pageProps }) {
 				)}
 			</Layout>
 		</CookiesProvider>
+		</>
 	);
 }

@@ -154,7 +154,7 @@ export default function CustomFooter(props) {
 									<div style={{ fontFamily: "Poppins" }} className="text-white flex flex-col content-between">
 										<h1 className="mb-2">
 											<span className="text-lg font-Poppins font-semibold	gradientText">
-												Colleges
+												Universities
 											</span>
 										</h1>
 										{college.length ? college.map((e, index) => (
@@ -246,18 +246,6 @@ export default function CustomFooter(props) {
 											<p className="font-medium mt-3">Uni Interact</p>
 										</Link>
 										<Link
-											href="/#overview"
-											scroll={false}
-										>
-											<p className="font-medium mt-3">Overview</p>
-										</Link>
-										<Link
-											href="/#how-it-works"
-											scroll={false}
-										>
-											<p className="font-medium mt-3">How It Works</p>
-										</Link>
-										<Link
 											href="/#faqs"
 											scroll={false}
 										>
@@ -282,8 +270,7 @@ export default function CustomFooter(props) {
 												</span>
 											</h1>
 											<Link
-												href="/#mission-and-vision"
-												scroll={false}
+												href="/aboutus"
 											>
 												<p className="font-medium mt-3">Mission And Vision</p>
 											</Link>

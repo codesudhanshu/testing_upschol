@@ -11,6 +11,7 @@ const OwlCarousel = dynamic(() => import("react-owl-carousel"), { ssr: false });
 
 const Lpu = () =>{
   const [activeTab, setActiveTab] = useState("UG");
+   const [selectedCourse, setSelectedCourse] = useState("PG");
     useEffect(() => {
             // Dynamically add Bootstrap CSS after Tailwind
             const link = document.createElement("link");
@@ -99,6 +100,16 @@ const Lpu = () =>{
              }
          };
         
+         const [isVisible, setIsVisible] = useState(true); // By default open
+  
+        // Hide form on scroll
+        useEffect(() => {
+          const handleScroll = () => setIsVisible(false);
+          window.addEventListener("scroll", handleScroll);
+          
+          return () => window.removeEventListener("scroll", handleScroll);
+        }, []);
+
 return(
     <>
  <Head>
@@ -151,6 +162,198 @@ return(
   </div>
  </div>  
 
+ <div className={styles.applyNowContainer}>
+      {/* Floating Apply Now Button */}
+      {!isVisible && (
+        <button className={styles.floatingButton} onClick={() => setIsVisible(true)}>
+          Apply Now
+        </button>
+      )}
+
+      {/* Form Container (Visible by default, hides on scroll) */}
+      {isVisible && (
+        <div className={styles.formContainer}>
+          <div className={styles.applyNowContainer}>
+      {/* Floating Apply Now Button */}
+      {!isVisible && (
+        <button className={styles.floatingButton} onClick={() => setIsVisible(true)}>
+          Apply Now
+        </button>
+      )}
+
+      {/* Form Container (Visible by default, hides on scroll) */}
+      {isVisible && (
+        <div className={styles.formContainer}>
+          <div className="col-md-1" />
+        <div style={{padding:'1em'}}>
+          <div id={`${styles.form_ftr} form-ftr`}>
+            <h3 className={styles.frm_heading}>Free Counseling</h3>
+            <center>
+              <p>Have Doubt? Talk FREE to Our Expert</p>
+            </center>
+            <hr />
+            <form
+              method="post"
+              name="form"
+              id="enquiry-form"
+              onSubmit={handleSubmit}
+            >
+              <input
+                type="text"
+                name="name"
+                id="full_name"
+                placeholder="Enter Your Name"
+                className="form-control"
+                required
+                value={formData.name}
+                onChange={handleChange}
+              />  <br />
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Enter Your Email"
+                className="form-control"
+                value={formData.email}
+                onChange={handleChange}
+              />  <br />
+              <input
+                type="tel"
+                id="phone"
+                name="phoneNumber"
+                className="form-control"
+                placeholder="Enter your phone number"
+                required
+                maxLength="10"
+                value={formData.phoneNumber}
+                onChange={handleChange}
+              />
+              <br />
+              <select
+                name="course"
+                className="form-control"
+                id="course"
+                required
+                value={formData.course}
+                onChange={handleChange}
+              >
+                <option value="" hidden="">
+                  Select Your Course
+                </option>
+                <option value="BA">BA</option>
+                <option value="BCOM">B.COM</option>
+                <option value="BCA">BCA</option>
+                <option value="MBA">MBA</option>
+                <option value="MA">MA</option>
+                <option value="MCOM">M.COM</option>
+                <option value="MSC">MSC</option>
+                <option value="MCA">MCA</option>
+              </select>
+              <br />
+              <select
+                name="location"
+                className="form-control"
+                id="location"
+                required
+                value={formData.location}
+                onChange={handleChange}
+              >
+                <option value="" hidden="">
+                  Select Your State
+                </option>
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                <option value="Assam">Assam</option>
+                <option value="Bihar">Bihar </option>
+                <option value="Chhattisgarh">Chhattisgarh</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Goa">Goa</option>
+                <option value="Gujarat">Gujarat </option>
+                <option value="Haryana">Haryana</option>
+                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                <option value="Jharkhand">Jharkhand </option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Madhya Pradesh">Madhya Pradesh </option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Manipur">Manipur</option>
+                <option value="Meghalaya">Meghalaya </option>
+                <option value="Mizoram">Mizoram</option>
+                <option value="Nagaland">Nagaland</option>
+                <option value="Odisha">Odisha </option>
+                <option value="Punjab">Punjab</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="Sikkim">Sikkim </option>
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="Telangana">Telangana</option>
+                <option value="Tripura">Tripura </option>
+                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                <option value="Uttarakhand">Uttarakhand </option>
+                <option value="West Bengal">West Bengal </option>
+              </select>
+              <input
+                type="hidden"
+                name="source"
+                id="source"
+                placeholder="Enter your source"
+                className="form-control"
+                defaultValue="LPU"
+                required=""
+              />
+              <br />
+              <input
+                type="hidden"
+                name="sub_source"
+                id="sub_source"
+                className="form-control"
+                defaultValue=""
+              />
+              <input
+                type="hidden"
+                name="utm_source"
+                id="utm_source"
+                className="form-control"
+                defaultValue=""
+              />
+              <input
+                type="hidden"
+                name="utm_medium"
+                id="utm_medium"
+                className="form-control"
+                defaultValue=""
+              />
+              <input
+                type="hidden"
+                name="utm_term"
+                id="utm_term"
+                className="form-control"
+                defaultValue=""
+              />
+              <center>
+              <button
+                  type="submit"
+                  name="submit"
+                  className={styles.sub_btn}
+                  disabled={loading} // Disable while loading
+                >               
+                  {loading ? (
+                    <div className={styles.loader}></div> // Show loader when loading is true
+                  ) : (
+                    "Submit"
+                  )}
+              </button>
+
+              </center>
+            </form>
+          </div>
+        </div>
+        </div>
+      )}
+    </div>
+        </div>
+      )}
+    </div>
+
 {/*  startslider */}
 <div id={styles.desk_sl}>
         <OwlCarousel
@@ -164,7 +367,7 @@ return(
           dots={false}
           nav={false} 
         >
-          {["/lpu/img1.png", "/lpu/img2.png", "/lpu/img3.png"].map((src, index) => (
+          {["/lpu/img1.jpg", "/lpu/img2.jpg", "/lpu/img3.jpg"].map((src, index) => (
             <div key={index} className={styles.slide}>
               <img src={src} width="100%" alt={`LPU Banner ${index + 1}`} />
             </div>
@@ -173,7 +376,218 @@ return(
       </div>
 
   {/*  endslider */}
-  <div className={styles.org_ad}>
+
+ <div className={styles.online_degree}>
+            <h1 className={styles.htext}>Online Degree <b>Programs Offered</b></h1>
+            <div className={styles.center}>
+                <div className={styles.buttons_course}>
+                    <button 
+                        className={`${styles.button_pg} ${selectedCourse === "PG" ? styles.selected : ""}`}
+                        onClick={() => setSelectedCourse("PG")}
+                    >
+                        PG Programs
+                    </button>
+                    <button 
+                        className={`${styles.button_ug} ${selectedCourse === "UG" ? styles.selected : ""}`}
+                        onClick={() => setSelectedCourse("UG")}
+                    >
+                        UG Programs
+                    </button>
+                    <button 
+                        className={`${styles.button_ug} ${selectedCourse === "DIPLOMA" ? styles.selected : ""}`}
+                        onClick={() => setSelectedCourse("DIPLOMA")}
+                    >
+                        Diploma Programs
+                    </button>
+                </div>
+            </div>
+
+            {selectedCourse === "UG" && (
+                <div className={styles.ugcourse}>
+                    <div className={styles.ugcourse_container}>
+                        <img src="/lpu/bba.jpg" className={styles.ugcourse_container_img} alt="BBA" />
+                        <div className={styles.ug_content}>
+                            <h2 className={styles.benifits}>BBA</h2>
+                            <h4 className={styles.eligibility}>Duration: 3 years</h4>
+                            <h4 className={styles.eligibility}>Total Credits: 132</h4>
+                            <h4 className={styles.eligibility}>Discipline Specific Electives : 4Courses</h4>
+                            <div className={styles.ugtenure}>
+                                <h4>Fees Starting at:</h4>
+                               <h2 className={styles.numbers}>₹22,160/Sem*</h2>
+                            </div>
+                        </div>
+                        <button className={styles.apply} onClick={() => {
+                const fnameInput = document.getElementById("name");
+                
+                if (fnameInput) {
+                  fnameInput.scrollIntoView({ behavior: "smooth", block: "start" });
+                  fnameInput.focus(); // Instant focus without delay
+                }
+              }}>Apply Now</button>
+                    </div>
+                    <div className={styles.ugcourse_container}>
+                        <img src="/lpu/bca.jpg" className={styles.ugcourse_container_img} alt="BCA" />
+                        <div className={styles.ug_content}>
+                            <h2 className={styles.benifits}>BCA</h2>
+                            <h4 className={styles.eligibility}>Duration: 3 years</h4>
+                            <h4 className={styles.eligibility}>Total Credits: 124</h4>
+                            <h4 className={styles.eligibility}>Discipline Specific Electives : 4Courses</h4>
+                            <div className={styles.ugtenure}>
+                                <h4>Fees Starting at:</h4>
+                               <h2 className={styles.numbers}>₹22,160/Sem*</h2>
+                            </div>
+                        </div>
+                        <button className={styles.apply} onClick={() => {
+                const fnameInput = document.getElementById("name");
+                
+                if (fnameInput) {
+                  fnameInput.scrollIntoView({ behavior: "smooth", block: "start" });
+                  fnameInput.focus(); // Instant focus without delay
+                }
+              }}>Apply Now</button>
+                    </div>
+                    <div className={styles.ugcourse_container}>
+                        <img src="/lpu/ba.jpg" className={styles.ugcourse_container_img} alt="BA" />
+                        <div className={styles.ug_content}>
+                            <h2 className={styles.benifits}>BA</h2>
+                            <h4 className={styles.eligibility}>Duration: 3 years</h4>
+                            <h4 className={styles.eligibility}>Total Credits: 124</h4>
+                            <h4 className={styles.eligibility}>Discipline Specific Electives : 4Courses</h4>
+                            <div className={styles.ugtenure}>
+                                <h4>Fees Starting at:</h4>
+                               <h2 className={styles.numbers}>₹14,960/Sem*</h2>
+                            </div>
+                        </div>
+                        <button className={styles.apply} onClick={() => {
+                const fnameInput = document.getElementById("name");
+                
+                if (fnameInput) {
+                  fnameInput.scrollIntoView({ behavior: "smooth", block: "start" });
+                  fnameInput.focus(); // Instant focus without delay
+                }
+              }}>Apply Now</button>
+                    </div>
+                </div>
+            )}
+
+            {selectedCourse === "PG" && (
+                <div className={styles.ugcourse}>
+                    <div className={styles.ugcourse_container}>
+                        <img src="/lpu/mba.jpg" className={styles.ugcourse_container_img} alt="MBA" />
+                        <div className={styles.ug_content}>
+                            <h2 className={styles.benifits}>MBA (9 specializations)</h2>
+                            <h4 className={styles.eligibility}>Duration: 2 years</h4>
+                            <h4 className={styles.eligibility}>Total Credits: 102</h4>
+                            <h4 className={styles.eligibility}>Discipline Specific Electives : 6</h4>
+                            <div className={styles.ugtenure}>
+                                <h4>Fees Starting at:</h4>
+                               <h2 className={styles.numbers}>₹32,960/Sem*</h2>
+                            </div>
+                        </div>
+                        <button className={styles.apply} onClick={() => {
+                const fnameInput = document.getElementById("name");
+                
+                if (fnameInput) {
+                  fnameInput.scrollIntoView({ behavior: "smooth", block: "start" });
+                  fnameInput.focus(); // Instant focus without delay
+                }
+              }}>Apply Now</button>
+                    </div>
+                    <div className={styles.ugcourse_container}>
+                        <img src="/lpu/mca.jpg" className={styles.ugcourse_container_img} alt="MBA" />
+                        <div className={styles.ug_content}>
+                            <h2 className={styles.benifits}>MCA (5 specializations)</h2>
+                            <h4 className={styles.eligibility}>Duration: 2 years</h4>
+                            <h4 className={styles.eligibility}>Total Credits: 104</h4>
+                            <h4 className={styles.eligibility}>Discipline Specific Electives : 4</h4>
+                            <div className={styles.ugtenure}>
+                                <h4>Fees Starting at:</h4>
+                               <h2 className={styles.numbers}>₹25,760/Sem*</h2>
+                            </div>
+                        </div>
+                        <button className={styles.apply} onClick={() => {
+                const fnameInput = document.getElementById("name");
+                
+                if (fnameInput) {
+                  fnameInput.scrollIntoView({ behavior: "smooth", block: "start" });
+                  fnameInput.focus(); // Instant focus without delay
+                }
+              }}>Apply Now</button>
+                    </div>
+                    <div className={styles.ugcourse_container}>
+                        <img src="/lpu/msc.jpg" className={styles.ugcourse_container_img} alt="MCOM" />
+                        <div className={styles.ug_content}>
+                            <h2 className={styles.benifits}>M.COM </h2>
+                            <h4 className={styles.eligibility}>Duration: 2 years</h4>
+                            <h4 className={styles.eligibility}>Total Credits: 84</h4>
+                            <h4 className={styles.eligibility}>Discipline Specific Electives : 6</h4>
+                            <div className={styles.ugtenure}>
+                                <h4>Fees Starting at:</h4>
+                               <h2 className={styles.numbers}>₹18,560/Sem*</h2>
+                            </div>
+                        </div>
+                        <button className={styles.apply} onClick={() => {
+                const fnameInput = document.getElementById("name");
+                
+                if (fnameInput) {
+                  fnameInput.scrollIntoView({ behavior: "smooth", block: "start" });
+                  fnameInput.focus(); // Instant focus without delay
+                }
+              }}>Apply Now</button>
+                    </div>
+                </div>
+            )}
+
+
+{selectedCourse === "DIPLOMA" && (
+                <div className={styles.ugcourse}>
+                    <div className={styles.ugcourse_container}>
+                        <img src="/lpu/dba.jpg" className={styles.ugcourse_container_img} alt="DBA" />
+                        <div className={styles.ug_content}>
+                            <h2 className={styles.benifits}>DBA</h2>
+                            <h4 className={styles.eligibility}>Duration: 1 years</h4>
+                            <h4 className={styles.eligibility}>Total Credits: 40</h4>
+                            <h4 className={styles.eligibility}>Discipline Specific Electives : 7</h4>
+                            <div className={styles.ugtenure}>
+                                <h4>Fees Starting at:</h4>
+                               <h2 className={styles.numbers}>₹24,400/Sem*</h2>
+                            </div>
+                        </div>
+                        <button className={styles.apply} onClick={() => {
+                const fnameInput = document.getElementById("name");
+                
+                if (fnameInput) {
+                  fnameInput.scrollIntoView({ behavior: "smooth", block: "start" });
+                  fnameInput.focus(); // Instant focus without delay
+                }
+              }}>Apply Now</button>
+                    </div>
+                    <div className={styles.ugcourse_container}>
+                        <img src="/lpu/dca.jpg" className={styles.ugcourse_container_img} alt="DCA" />
+                        <div className={styles.ug_content}>
+                            <h2 className={styles.benifits}>DCA</h2>
+                            <h4 className={styles.eligibility}>Duration: 1 years</h4>
+                            <h4 className={styles.eligibility}>Total Credits: 40</h4>
+                            <h4 className={styles.eligibility}>Discipline Specific Electives : 7</h4>
+                            <div className={styles.ugtenure}>
+                                <h4>Fees Starting at:</h4>
+                               <h2 className={styles.numbers}>₹24,400/Sem*</h2>
+                            </div>
+                        </div>
+                        <button className={styles.apply} onClick={() => {
+                const fnameInput = document.getElementById("name");
+                
+                if (fnameInput) {
+                  fnameInput.scrollIntoView({ behavior: "smooth", block: "start" });
+                  fnameInput.focus(); // Instant focus without delay
+                }
+              }}>Apply Now</button>
+                    </div>
+                </div>
+            )}
+        </div>
+
+        <div className={styles.org_ad}>
     <div className="container">
       <div className="row">
         <div className="col-md-8">
@@ -202,6 +616,8 @@ return(
     </div>
     {/*end of container*/}
   </div>
+
+
   <section id={styles.facility}>
     <div className="container">
       <div className="row">

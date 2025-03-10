@@ -92,7 +92,7 @@
 
     @media only screen and (max-width: 768px){
         .mobmar{
-               margin-top: 85px !important;
+               margin-top: 25px;
         }
         .donotshowonmob{
             display:none;
@@ -510,7 +510,7 @@ border: none;
     /*}*/
     
     .mobmar{
-           margin-top: 164px !important;
+           margin-top: 50px !important;
     }
     
     .navlogo{
@@ -569,6 +569,8 @@ border: none;
       background-color: #dcdbdb;
       outline: none;
       border: none;
+      padding: 10px 14px;
+      border-radius: 5px;
     }
 
 .about_title h5 {
@@ -738,4 +740,149 @@ border: none;
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+.manipal_images_div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  padding: 2em;
+}
+
+.manipal_images_divs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* ya jitni width chahiye */
+  height: 8em;
+}
+
+.manipal_images {
+  text-align: center;
+  align-items: center;
+  width: 27%;
+  height: 12em;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  padding: 0;
+  border-radius: 5px;
+  margin: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Content ke beech space create karega */
+  overflow: hidden; /* Extra content cut ho jayega */
+}
+
+.manipal_para1,
+.manipal_para2,
+.manipal_para3 {
+  background: transparent;
+  padding: 10px 0 5px 0;
+  color: white;
+  width: 100%; /* Full width maintain karega */
+  text-align: center; /* Text center aligned rahega */
+  position: relative;
+  margin-top: auto; /* Ensures para always stays at bottom */
+}
+
+.manipal_para1 {
+  background: linear-gradient(180deg, #00B5B3 0%, #14223D 100%);
+}
+
+.manipal_para2 {
+  background: linear-gradient(180deg, #DED7B6 0%, #0522D2 100%);
+}
+
+.manipal_para3 {
+  background: linear-gradient(180deg, #57FF45 0%, #013C51 100%);
+}
+
+
+.manipal_div{
+  border: 3px solid #FF6A6A;
+  border-radius: 12px;
+  text-align: center;
+  margin: 3em 5em;
+  padding: 1em 3em 2em 3em;
+}
+
+.seciton_padding {
+  padding: 65px 0;
+}
+
+.certificate_sec {
+  background: transparent linear-gradient(270deg, #FF6600 0%, #EE3024 100%) 0% 0% no-repeat padding-box;
+  color     : #fff;
+}
+
+
+.certificat_list li {
+  margin-bottom: 12px;
+  font-size    : 14px;
+}
+
+.certificat_list {
+  border-left : 2px solid;
+  list-style  : none;
+  margin-left : 15px;
+  padding-left: 15px;
+}
+
+.headingbox {
+  margin-bottom: 50px;
+}
+
+.headingbox p {
+  font-size : 18px;
+  margin-top: 12px;
+}
+
+.d_flex{
+  display: flex;
+}
+
+#image_data{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.selected {
+  background-color: #FF6600;
+  color: white !important;
+  outline: none;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 5px;
+}
+
+
+@media screen and (max-width:767px) {
+  .manipal_images_div{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+  .manipal_images{
+    text-align: center;
+    align-items: center;
+    width: 90%;
+    height: 12em;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .2);
+    padding: 0;
+    border-radius: 5px;
+    margin: 2em 1em;
+  }
+
+  .manipal_div{
+    border: 3px solid #FF6A6A;
+    border-radius: 12px;
+    text-align: center;
+    margin: 12em 1em 1em 1em;
+    padding: 1em;
+  }
 }
